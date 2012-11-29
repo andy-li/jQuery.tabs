@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.tabs插件</title>
+    <link type="text/css" href="./assets/css/base.css" rel="stylesheet" media="screen" />
+    <script type="text/javascript" src="./assets/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.tabs.js"></script>
+
+    <style type="text/css">
+        body {
+            background-color: #FBFBF0;
+        }
+        .wrap {margin-top: 50px; margin-left: auto; margin-right: auto; background-color: #fff; width: 720px; padding: 20px;}
+
+        #tabs {list-style: none; margin: 20px 0;}
+        #tabs li {display: inline; margin-right: 20px; padding: 8px 15px; font-size: 14px; color: #999; cursor: pointer;}
+        #tabs li.active,#tabs li.active.hover {background-color: #2f64a6; color: #fff;}
+        #tabs li.hover {background-color: #8f8f8f; color: #fff;}
+
+        .tab-content {background-color: #FBFBF0; width: 500px; height: 100px; padding: 15px 20px; font-size: 18px; color: #999;}
+        .tab-content .tab-content-body {display: none;}
+        .tab-content .tab-content-body.active {display: block;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul id="tabs">
+            <li data-tab="user">Users</li>
+            <li data-tab="groups">Groups</li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-content-body" data-tab="user">
+                User List.
+            </div>
+            <div class="tab-content-body" data-tab="groups">
+                Group List.
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            $("ul#tabs").tabs();
+        });
+    </script>
+</body>
+</html>
